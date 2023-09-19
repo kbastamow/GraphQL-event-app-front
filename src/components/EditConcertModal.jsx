@@ -128,22 +128,22 @@ const EditConcertModal = ({ eventDetail }) => {
                   </div>
                 </div>
 
-<div>
-                <div className="bg bg-warning text-start small px-2 mh-300 overflow-auto ">
-                  <div>Select Artists:</div>
-                  <ul className="list-unstyled">
-                    {data?.artists?.map((artist) =>
-                    (
-     
+                <div>
+                  <div className="bg bg-warning text-start small px-2 mh-300 overflow-auto ">
+                    <div>Select Artists:</div>
+                    <ul className="list-unstyled">
+                      {data?.artists?.map((artist) =>
+                      (
+
                         <li key={artist.name} className="artistList" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
                           {artist.name}
                         </li>
-             
-                    ))}
-                  </ul>
 
-                </div>
-                <AddArtist></AddArtist>
+                      ))}
+                    </ul>
+
+                  </div>
+                  <AddArtist></AddArtist>
                 </div>
 
               </div>
