@@ -1,4 +1,3 @@
-import React from 'react'
 import { GET_ARTIST } from '../queries/artistQueries'
 import { useQuery } from '@apollo/client'
 import { useParams, useNavigate } from 'react-router-dom';

@@ -6,6 +6,11 @@ query getArtists {
         id,
         name,
         bio,
+        type
+        genres {
+            id,
+            name
+        }
     }
 }
 `
@@ -16,6 +21,11 @@ query getArtist($id: ID!) {
         id,
         name,
         bio,
+        type,
+        genres {
+            id,
+            name
+        }
 }
 }
 `

@@ -3,6 +3,7 @@ import { GET_ARTISTS } from '../queries/artistQueries';
 import { useMutation, useQuery } from '@apollo/client';
 import { UPDATE_EVENT } from '../mutations/eventMutations';
 import { GET_EVENTS } from '../queries/eventQueries';
+import AddArtist from './AddArtist';
 
 const EditConcertModal = ({ eventDetail }) => {
 
@@ -127,7 +128,7 @@ const EditConcertModal = ({ eventDetail }) => {
                   </div>
                 </div>
 
-
+<div>
                 <div className="bg bg-warning text-start small px-2 mh-300 overflow-auto ">
                   <div>Select Artists:</div>
                   <ul className="list-unstyled">
@@ -142,7 +143,8 @@ const EditConcertModal = ({ eventDetail }) => {
                   </ul>
 
                 </div>
-
+                <AddArtist></AddArtist>
+                </div>
 
               </div>
 

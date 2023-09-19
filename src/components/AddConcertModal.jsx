@@ -3,6 +3,7 @@ import { GET_ARTISTS } from '../queries/artistQueries';
 import { useMutation, useQuery } from '@apollo/client';
 import { ADD_EVENT } from '../mutations/eventMutations';
 import { GET_EVENTS } from '../queries/eventQueries';
+import AddArtist from './AddArtist';
 
 const AddConcertModal = () => {
 
@@ -132,6 +133,7 @@ const AddConcertModal = () => {
                       </div>
                       <div>
                         {artists && artists.map(artist => <span className="badge bg-info" key={artist.id}>{artist.name} <span onClick={() => setArtists(artists.filter(item => item.id !== artist.id))}>X</span></span>)}
+
                       </div>
                       <button
                         type='submit'
@@ -145,17 +147,19 @@ const AddConcertModal = () => {
                   </div>
                 </div>
 
-
-                <div className="bg bg-warning text-start small px-2 mh-300 overflow-auto ">
-                  <div>Select Artists:</div>
-                  <ul className="list-unstyled">
-                    {data?.artists?.map((artist) =>
-                    (
-                      <li key={artist.id} className="artistList" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
-                        {artist.name}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex flex-column">
+                  <div className="bg bg-warning text-start small px-2 mh-5 overflow-scroll">
+                    <div>Select Artists:</div>
+                    <ul className="list-unstyled">
+                      {data?.artists?.map((artist) =>
+                      (
+                        <li key={artist.id} className="artistList" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
+                          {artist.name}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <AddArtist></AddArtist>
 
                 </div>
 
