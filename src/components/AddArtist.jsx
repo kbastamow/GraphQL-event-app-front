@@ -56,7 +56,7 @@ const AddArtist = () => {
         </div>
         <button
           type='submit'
-          className='btn btn-secondary btn-sm my-2 px-2'
+          className='btn btn-danger btn-sm my-2 px-2'
         >
           Add artist
         </button>

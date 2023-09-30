@@ -32,8 +32,8 @@ function App() {
 
   return (
     <>
-     <div className="container-fluid bg bg-warning">
-     <div className= "row">
+     <div className="container-fluid bg bg-warning display ">
+     <div className= "row w-75 mx-auto ">
       <ApolloProvider client={client}> 
         <BrowserRouter>
         <Routes>

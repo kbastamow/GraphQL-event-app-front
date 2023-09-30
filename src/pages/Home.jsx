@@ -12,7 +12,7 @@ const Home
           </div>
         </div>
         <div className="col-md-6">
-          <div className="d-flex flex-column justify-content-center align-items-start h-75 py-5">
+          <div className="d-flex flex-column justify-content-center align-items-center h-75 pb-5">
             <Concerts></Concerts>
           </div>
         </div>

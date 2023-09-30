@@ -1,13 +1,12 @@
 import EditArtistModal from "./EditArtistModal"
 
 const ArtistDetail = ({ artistDetail }) => {
-  console.log("Detail: ", artistDetail)
   const { name, bio, type, genres } = artistDetail
 
   return (
     <>
 
-      <div className="card border rounded-4 mx-5 text-center h-75 p-3 m-3" >
+      <div className="card border rounded-4 mx-5 text-center h-75 p-3 m-3 bg bg-info" >
         <div className="card-header d-flex justify-content-center">
           <h5 className="text-primary">{name}</h5>
         </div>

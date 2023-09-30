@@ -6,23 +6,19 @@ import { BsMusicNote } from 'react-icons/bs'
 import placeholderImage from '../assets/placeholder.png';
 
 const ConcertDetail = ({ eventDetail }) => {
-  console.log("Detail: ", eventDetail)
   const { name, description, date, price, artists, image } = eventDetail
   const navigate = useNavigate()
-
 
   const showArtist = (artistId) => {
     console.log("navigating")
     navigate(`/artist/${artistId}`)
-
   }
-
 
   return (
     <>
       {/* <div className="h-100"> */}
         {/* <div className="px-5"> */}
-        <div className="card border rounded-4 mx-5 text-center h-75 p-3" >
+        <div className="card border rounded-4 mx-5 text-center h-75 p-3 m-3 bg bg-info" >
           <div className="d-flex justify-content-center">
             <img className="card-img-top w-50" src={image ? image : placeholderImage} alt="Card image cap" />
           </div>

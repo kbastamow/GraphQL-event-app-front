@@ -37,11 +37,11 @@ const Concert = ({event}) => {
     <hr className="hr hr-blur"></hr>
     <div className="card px-2 d-flex flex-column">
   <div className="d-flex justify-content-between">
-    <div className="small text-primary mb-2">{dateConverter(date)}</div>
+    <div className="small text-light mb-2">{dateConverter(date)}</div>
     <div className="fw-bold">{price === 0 ? <>Free entry</> : <>{price}€</>}</div>
     </div>
   <div className="card-body">
-    <h5 className="card-title "><HiMusicNote className="text-danger me-2"/> {name}</h5>
+    <h5 className="card-title fs-5"><HiMusicNote className="text-danger me-2"/> {name}</h5>
     
     <div className="d-flex justify-content-end gap-5">
     <div onClick={showDetails} className="link text-primary"><FaPaperPlane className="text-danger me-2"></FaPaperPlane> Details </div>

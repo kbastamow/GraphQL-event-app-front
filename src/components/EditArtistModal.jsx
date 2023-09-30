@@ -4,9 +4,10 @@ import { useMutation, useQuery } from '@apollo/client';
 import { UPDATE_ARTIST } from '../mutations/artistMutations';
 import AddGenre from './AddGenre';
 import { GET_GENRES } from '../queries/genreQueries';
+import { BsFillTrash3Fill } from "react-icons/bs";
 
 const EditArtistModal = ({ artistDetail }) => {
-
+console.log(artistDetail)
     const { loading, error, data } = useQuery(GET_GENRES);
     const [genres, setGenres] = useState(artistDetail.genres)
     const [name, setName] = useState(artistDetail.name);
@@ -17,7 +18,6 @@ const EditArtistModal = ({ artistDetail }) => {
         setType(event.target.value);
     };
 
-
     const [updateArtist] = useMutation(UPDATE_ARTIST, {
         variables: { id: artistDetail.id, name, bio, type },
         refetchQueries: [{ query: GET_ARTISTS }],
@@ -26,7 +26,7 @@ const EditArtistModal = ({ artistDetail }) => {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        if (name === '' || bio === '' || type === '') {
+        if (name === '' || bio === '') {
             return alert('Please fill in all fields');
         }
         updateArtist();
@@ -42,14 +42,18 @@ const EditArtistModal = ({ artistDetail }) => {
 
     return (
         <>
-            <button
-                type='button'
-                className='btn btn-secondary'
-                data-bs-toggle='modal'
-                data-bs-target='#editArtistModal'
-            >
-                Edit Artist
-            </button>
+            <div className="d-flex justify-content-end">
+                <button
+                    type='button'
+                    className='btn btn-secondary btn-sm'
+                    data-bs-toggle='modal'
+                    data-bs-target='#editArtistModal'
+                >
+                    <div className='d-flex align-items-center'>
+                        Edit Artist
+                    </div>
+                </button>
+            </div>
 
             <div
                 className='modal fade'
@@ -57,7 +61,7 @@ const EditArtistModal = ({ artistDetail }) => {
                 aria-labelledby='editArtistModalLabel'
                 aria-hidden='true'
             >
-                <div className='modal-dialog'>
+                <div className='modal-dialog modal-lg'>
 
                     <div className='modal-content'>
                         <div className='modal-header'>
@@ -72,8 +76,8 @@ const EditArtistModal = ({ artistDetail }) => {
                             ></button>
                         </div>
                         <div className="d-flex flex-row">
-                            <div className="bg bg-success flex-grow-1">
-                                <div className='modal-body'>
+                            <div className="bg bg-light flex-grow-1">
+                                <div className='modal-body px-5'>
                                     <form onSubmit={onSubmit}>
                                         <div className='mb-1'>
                                             <label className='form-label'>Name</label>
@@ -90,13 +94,13 @@ const EditArtistModal = ({ artistDetail }) => {
                                             <textarea
                                                 className="form-control"
                                                 id="bio"
-                                                rows="3"
+                                                rows="5"
                                                 value={bio}
                                                 onChange={(e) => setBio(e.target.value)}
                                             ></textarea>
                                         </div>
                                         <div className='mb-1'>
-                                            <div>Type:</div>
+                                            <div>Type</div>
                                             <div>
                                                 <label>
                                                     <input
@@ -136,30 +140,36 @@ const EditArtistModal = ({ artistDetail }) => {
                                                 </label>
                                             </div>
                                         </div>
-                                        <div>
-                        {genres && genres.map(genre => <span className="badge bg-primary" key={genre.id}>{genre.name} <span onClick={() => setGenres(genres.filter(item => item.id !== genre.id))}>X</span></span>)}
-                      </div>
-                                        <button
-                                            type='submit'
-                                            data-bs-dismiss='modal'
-                                            className='btn btn-secondary mt-2'
-                                        >
-                                            Save
-                                        </button>
+                                        <div className="d-flex flex-wrap">
+                                            {genres && genres.map(genre => <span className="badge bg-primary text-danger rounded-pill px-3 py-1 m-1 small" key={genre.id}>{genre.name} <span onClick={() => setGenres(genres.filter(item => item.id !== genre.id))}><BsFillTrash3Fill /></span></span>)}
+                                        </div>
+
+                                        <div className="d-flex justify-content-center mb-5">
+                                            <button
+                                                type='submit'
+                                                data-bs-dismiss='modal'
+                                                className='btn btn-danger mt-2'
+                                            >
+                                                Save
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
-                            <div>
-                                <div className="bg bg-warning text-start small px-2 mh-300 overflow-auto ">
+
+                            <div className="flex flex-column bg bg-light px-4 pt-2">
+                                <div className="bg bg-light text-start small px-2 overflow-auto">
                                     <div>Select Genres:</div>
-                                    <ul className="list-unstyled">
-                                        {data?.genres?.map((genre) =>
-                                        (
-                                            <li key={genre.name} className="artistList" onClick={() => setGenres([...genres, { id: genre.id, name: genre.name }])}>
-                                                {genre.name}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <div className="ps-3">
+                                        <ul className="list-unstyled">
+                                            {data?.genres?.map((genre) =>
+                                            (
+                                                <li key={genre.name} className="artistList text-danger link" onClick={() => setGenres([...genres, { id: genre.id, name: genre.name }])}>
+                                                    {genre.name}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                                 <AddGenre></AddGenre>
                             </div>

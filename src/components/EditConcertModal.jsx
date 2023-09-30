@@ -4,6 +4,7 @@ import { useMutation, useQuery } from '@apollo/client';
 import { UPDATE_EVENT } from '../mutations/eventMutations';
 import { GET_EVENTS } from '../queries/eventQueries';
 import AddArtist from './AddArtist';
+import { BsFillTrash3Fill } from "react-icons/bs";
 
 const EditConcertModal = ({ eventDetail }) => {
 
@@ -32,16 +33,16 @@ const EditConcertModal = ({ eventDetail }) => {
 
   return (
     <>
-      <div className='d-flex justify-content-center'>
+     <div className="d-flex justify-content-end">
       <button
         type='button'
-        className='btn btn-secondary btn-sm mt-3'
+        className='btn btn-secondary btn-sm'
         data-bs-toggle='modal'
         data-bs-target='#addEventModal'
       >
-      
-          <div>Edit Event</div>
-        
+        <div className='d-flex align-items-center'>
+         Edit Event
+        </div>
       </button>
       </div>
       {loading || error ? <></> : (
@@ -53,12 +54,12 @@ const EditConcertModal = ({ eventDetail }) => {
         >
 
 
-          <div className='modal-dialog'>
+          <div className='modal-dialog modal-lg'>
 
-            <div className='modal-content'>
-              <div className='modal-header bg bg-danger'>
+            <div className='modal-content '>
+              <div className='modal-header'>
                 <div className='modal-title' id='addEventModalLabel'>
-                  Edit Event
+                  Add Event
                 </div>
                 <button
                   type='button'
@@ -68,8 +69,8 @@ const EditConcertModal = ({ eventDetail }) => {
                 ></button>
               </div>
               <div className="d-flex flex-row">
-                <div className="bg bg-danger">
-                  <div className='modal-body'>
+                <div className="bg bg-light">
+                  <div className='modal-body px-5'>
                     <form onSubmit={onSubmit}>
                       <div className='mb-1'>
                         <label className='form-label'>Name</label>
@@ -115,41 +116,40 @@ const EditConcertModal = ({ eventDetail }) => {
                           onChange={(e) => setDescription(e.target.value)}
                         ></textarea>
                       </div>
-                      <div>
-                        {artists && artists.map(artist => <span className="badge bg-info" key={artist.id}>{artist.name} <span onClick={() => setArtists(artists.filter(item => item.id !== artist.id))}>X</span></span>)}
-                      </div>
-                      <button
-                        type='submit'
-                        data-bs-dismiss='modal'
-                        className='btn btn-secondary mt-2'
-                      >
-                        Save
-                      </button>
-                    </form>
+                      <div className="d-flex flex-wrap">
+                        {artists && artists.map(artist => <span className="badge bg-primary text-danger rounded-pill px-3 py-1 m-1 small" key={artist.id}> {artist.name} <span onClick={() => setArtists(artists.filter(item => item.id !== artist.id))}><BsFillTrash3Fill/></span></span>)}
 
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <button
+                          type='submit'
+                          data-bs-dismiss='modal'
+                          className='btn btn-danger mt-2'
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
-
-                <div>
-                  <div className="bg bg-warning text-start small px-2 mh-300 overflow-auto ">
+              
+                <div className="flex flex-column bg bg-light px-4 pt-2">
+                  <div className="bg bg-light text-start small px-2 mh-5 h-75 overflow-auto">
                     <div>Select Artists:</div>
-                    <ul className="list-unstyled">
-                      {data?.artists?.map((artist) =>
-                      (
-
-                        <li key={artist.name} className="artistList" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
-                          {artist.name}
-                        </li>
-
-                      ))}
-                    </ul>
-
+                    <div className="ps-3">
+                      <ul className="list-unstyled">
+                        {data?.artists?.map((artist) =>
+                        (
+                          <li key={artist.id} className="artistList text-danger link" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
+                            {artist.name}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                   <AddArtist></AddArtist>
                 </div>
-
               </div>
-
             </div>
 
           </div>

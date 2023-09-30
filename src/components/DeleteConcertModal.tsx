@@ -1,6 +1,3 @@
-import { useMutation } from "@apollo/client";
-import { DELETE_EVENT } from "../mutations/eventMutations";
-import { GET_EVENTS } from "../queries/eventQueries";
 import { BsFillTrash3Fill } from "react-icons/bs";
 import React from "react";
 
@@ -26,9 +23,9 @@ const DeleteConcertModal = ({ handleDelete }) => {
         aria-hidden="true"
       >
         <div className="modal-dialog">
-          <div className="modal-content">
+          <div className="modal-content bg bg-light">
             <div className="modal-header">
-              <div className="modal-title" id="deleteEventModal">
+              <div className="modal-title text-danger" id="deleteEventModal">
                 Are you sure you want to delete the event?
               </div>
               <button

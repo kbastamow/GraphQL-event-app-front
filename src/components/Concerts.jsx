@@ -18,16 +18,16 @@ const Concerts = () => {
     <>
       {!loading && !error && (
         <>
-         
+
           {/* <h1 className="fs-3 text-primary">Schedule</h1> */}
-          <div className="overflow-auto px-5 mb-3">
+          <div className="overflow-auto h-75 px-5 mb-3 bg bg-info border border-info rounded-4">
             {data.events.map(event => (
               <Concert key={event.id} event={event}></Concert>
             ))}
           </div>
-       
-          <AddConcertModal></AddConcertModal> 
-
+          <div className="ms-5">
+            <AddConcertModal></AddConcertModal>
+          </div>
         </>
       )}
     </>

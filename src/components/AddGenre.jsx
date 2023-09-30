@@ -39,8 +39,10 @@ const AddGenre = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <div className='mb-1'>
+    <div className="d-flex flex-column align-items-center">
+    <hr className="hr"/>
+      <form onSubmit={onSubmit} className="d-flex flex-column align-items-center">
+        <div className='mb-1 px-2'>
           <div>Add Genre</div>
           <input
             type='text'
@@ -53,12 +55,12 @@ const AddGenre = () => {
         </div>
         <button
           type='submit'
-          className='btn btn-secondary btn-sm my-2 px-2'
+          className='btn btn-danger btn-sm my-2 px-2'
         >
           Add Genre
         </button>
       </form>
-
+</div>
     </>
   )
 }

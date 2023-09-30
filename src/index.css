@@ -1,5 +1,5 @@
 :root {
-  color: white;
+  color: #E4D9FF;
   background-color: #003554ff;
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -36,7 +36,7 @@
 }
 
 .display { 
-  background-image: url("./src/assets/microphone.png");
+  background-image: url("./src/assets/microphone2.png");
   background-repeat: no-repeat;
   background-size: 250px auto;
   background-position: 25% 25%;

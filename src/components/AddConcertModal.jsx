@@ -83,7 +83,7 @@ const AddConcertModal = () => {
                 ></button>
               </div>
               <div className="d-flex flex-row">
-                <div className="bg bg-secondary">
+                <div className="bg bg-light">
                   <div className='modal-body px-5'>
                     <form onSubmit={onSubmit}>
                       <div className='mb-1'>
@@ -147,14 +147,14 @@ const AddConcertModal = () => {
                   </div>
                 </div>
               
-                <div className="flex flex-column bg bg-danger px-4 pt-2">
-                  <div className="bg bg-danger text-start small px-2 mh-5 h-75 overflow-auto">
+                <div className="flex flex-column bg bg-light px-4 pt-2">
+                  <div className="bg bg-light text-start small  px-4 mh-5 h-75 overflow-auto">
                     <div>Select Artists:</div>
                     <div className="ps-3">
                       <ul className="list-unstyled">
                         {data?.artists?.map((artist) =>
                         (
-                          <li key={artist.id} className="artistList text-primary link" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
+                          <li key={artist.id} className="artistList text-danger link" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
                             {artist.name}
                           </li>
                         ))}
