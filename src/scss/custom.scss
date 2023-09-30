@@ -1,0 +1,66 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+
+$primary:#646cff;
+$secondary:  #0582ca;
+$success: #6610f2;
+$warning: #003554ff;
+$danger: #051923ff;
+
+
+// $theme-colors: (
+//   "primary": #ff4136
+// //   "danger": #ff4136
+// );
+// Default variable overrides
+// $primary: #6610f2 ;
+
+// Merge the maps
+// $theme-colors: ();
+// $theme-colors: map-merge($theme-colors, $primary);
+
+// Required
+
+@import "../../node_modules/bootstrap/scss/variables";
+
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Optional Bootstrap components here
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";
+

@@ -8,21 +8,29 @@ import { BsArrowLeftSquare } from "react-icons/bs";
 
 const Event = () => {
   const navigate = useNavigate();
-  const { eventId } = useParams(); 
+  const { eventId } = useParams();
 
-  const { loading, error, data } = useQuery(GET_EVENT, 
+  const { loading, error, data } = useQuery(GET_EVENT,
     {
-        variables: {id: eventId},
+      variables: { id: eventId },
     })
-  
+
   if (loading) return <p>Loading</p>
   if (error) return <p>There was a problem getting the event</p>
 
   return (
     <>
-    
-    <div onClick={() => navigate(-1)}><BsArrowLeftSquare></BsArrowLeftSquare><p>Go back</p></div>
-    <ConcertDetail eventDetail={data.event}></ConcertDetail>
+      <div className="col-md-6 bg bg-transparent ">
+        <div className="d-flex flex-column justify-content-center align-items-center py-5 mt-5">
+          <h1 className="h1">Event</h1>
+          <div onClick={() => navigate(-1)} className="link text-primary"><BsArrowLeftSquare></BsArrowLeftSquare><span className="ps-2">Back</span></div>
+        </div>
+      </div>
+      <div className="col-md-6">
+        <div className="d-flex flex-column justify-content-center align-items-center my-5 py-5">
+          <ConcertDetail eventDetail={data.event}></ConcertDetail>
+        </div>
+      </div>
     </>
   )
 }

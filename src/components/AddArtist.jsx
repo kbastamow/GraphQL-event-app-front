@@ -40,12 +40,14 @@ const AddArtist = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <div className='mb-1'>
-          <div>Add artist</div>
+    <div className="d-flex flex-column align-items-center">
+    <hr className="hr"/>
+      <form onSubmit={onSubmit} className="d-flex flex-column align-items-center">
+        <div className='mb-1 px-2'>
+          <div className="small text-center">Add artist</div>
           <input
             type='text'
-            className='form-control'
+            className='form-control input-sm'
             id='name'
             placeholder= "name"
             value={name}
@@ -59,7 +61,7 @@ const AddArtist = () => {
           Add artist
         </button>
       </form>
-
+      </div>
     </>
   )
 }

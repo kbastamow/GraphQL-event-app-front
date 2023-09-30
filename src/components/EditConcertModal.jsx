@@ -32,16 +32,18 @@ const EditConcertModal = ({ eventDetail }) => {
 
   return (
     <>
+      <div className='d-flex justify-content-center'>
       <button
         type='button'
-        className='btn btn-secondary'
+        className='btn btn-secondary btn-sm mt-3'
         data-bs-toggle='modal'
         data-bs-target='#addEventModal'
       >
-        <div className='d-flex align-items-center'>
+      
           <div>Edit Event</div>
-        </div>
+        
       </button>
+      </div>
       {loading || error ? <></> : (
         <div
           className='modal fade'
@@ -54,7 +56,7 @@ const EditConcertModal = ({ eventDetail }) => {
           <div className='modal-dialog'>
 
             <div className='modal-content'>
-              <div className='modal-header'>
+              <div className='modal-header bg bg-danger'>
                 <div className='modal-title' id='addEventModalLabel'>
                   Edit Event
                 </div>
@@ -66,7 +68,7 @@ const EditConcertModal = ({ eventDetail }) => {
                 ></button>
               </div>
               <div className="d-flex flex-row">
-                <div className="bg bg-success">
+                <div className="bg bg-danger">
                   <div className='modal-body'>
                     <form onSubmit={onSubmit}>
                       <div className='mb-1'>

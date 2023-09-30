@@ -7,28 +7,30 @@ import { ADD_EVENT } from "../mutations/eventMutations"
 
 const Concerts = () => {
 
-    const { loading, error, data } = useQuery(GET_EVENTS)
+  const { loading, error, data } = useQuery(GET_EVENTS)
 
-    if (loading) return <p>Loading</p>
-    if (error) return <p>There was a problem getting events</p>
-    console.log(data)
+  if (loading) return <p>Loading</p>
+  if (error) return <p>There was a problem getting events</p>
+  console.log(data)
 
-  
+
   return (
     <>
-    
-    {!loading && !error && (
-        <div>
-          <AddConcertModal></AddConcertModal>
-        <h1>Concerts:</h1>
-        <div>
-        {data.events.map(event =>  (
-        <Concert key={event.id} event={event}></Concert>
-        ))}
-        </div>
-    </div>
-    )}
-  </>
+      {!loading && !error && (
+        <>
+         
+          {/* <h1 className="fs-3 text-primary">Schedule</h1> */}
+          <div className="overflow-auto px-5 mb-3">
+            {data.events.map(event => (
+              <Concert key={event.id} event={event}></Concert>
+            ))}
+          </div>
+       
+          <AddConcertModal></AddConcertModal> 
+
+        </>
+      )}
+    </>
   )
 }
 

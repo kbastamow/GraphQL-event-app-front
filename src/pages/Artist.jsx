@@ -19,8 +19,17 @@ const Artist = () => {
 
   return (
     <>
-    <div onClick={() => navigate(-1)}><BsArrowLeftSquare></BsArrowLeftSquare><p>Go back</p></div>
+    <div className="col-md-6 bg bg-transparent">
+        <div className="d-flex flex-column justify-content-center align-items-center py-5  mt-5">
+          <h1 className="h1">Artist</h1>
+          <div onClick={() => navigate(-1)} className="link text-primary"><BsArrowLeftSquare></BsArrowLeftSquare><span className="ps-2">Back</span></div>
+      </div>
+      </div>
+      <div className="col-md-6">
+        <div className="d-flex flex-column justify-content-center align-items-center my-5 py-5">
     <ArtistDetail artistDetail={data.artist}></ArtistDetail>
+    </div>
+      </div>
     </>
   )
 }
