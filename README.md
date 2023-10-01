@@ -1,4 +1,4 @@
-# GraphQL Event App
+# GraphQL Event App Front
 
 ![alt logos](./src/assets/readme/reactapollographql.png)
 
@@ -8,11 +8,11 @@ This is a front-end for a simple concert administration app built in order to in
 
 The app lists upcoming concerts, shows details of each concert and details of artists. 
 
-The administrator can add, edit and delete concerts, and add and edit artists.
+The administrator can add, edit and delete concerts, and add and edit artists, tag artists with music genres and add genres.
 
 The backend for the app can be found here:  
 
-🔗[Graphql-event-app-backend](https://github.com/)
+🔗[Graphql-event-app-backend](https://github.com/kbastamow/GraphQL-event-app-back)
 
 ## ⚒️ Tech
 
