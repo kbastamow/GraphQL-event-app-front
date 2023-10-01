@@ -28,9 +28,9 @@ The backend for the app can be found here:
 <img src="./src/assets/readme/concerts.png" alt="concerts" width="500"/>
 <img src="./src/assets/readme/concert.png" alt="concerts" width="500"/>
 <img src="./src/assets/readme/artist.png" alt="concerts" width="500"/>
-<img src="./src/assets/readme/addconcert.png" alt="addconcert" width="300"/>
-<img src="./src/assets/readme/edit.png" alt="edit" width="300"/>
-<img src="./src/assets/readme/editartist.png" alt="editartist" width="300"/>
+<img src="./src/assets/readme/addconcert.png" alt="addconcert" width="400"/>
+<img src="./src/assets/readme/edit.png" alt="edit" width="400"/>
+<img src="./src/assets/readme/editartist.png" alt="editartist" width="400"/>
 
 ## Author
 
