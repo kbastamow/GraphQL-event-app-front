@@ -6,9 +6,9 @@ const Home
     return (
       <>
 
-        <div className="col-md-6 bg bg-transparent">
-          <div className="d-flex justify-content-center align-items-center py-5  mt-5">
-            <h1 className="h1">Schedule</h1>
+        <div className="col-sm-12 col-md-6 bg bg-transparent">
+          <div className="d-flex justify-content-center align-items-center py-5 mt-5">
+            <h1> Concert Schedule</h1>
           </div>
         </div>
         <div className="col-md-6">

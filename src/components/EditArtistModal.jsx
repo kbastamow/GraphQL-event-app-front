@@ -45,7 +45,7 @@ console.log(artistDetail)
             <div className="d-flex justify-content-end">
                 <button
                     type='button'
-                    className='btn btn-secondary btn-sm'
+                    className='btn btn-danger btn-sm'
                     data-bs-toggle='modal'
                     data-bs-target='#editArtistModal'
                 >

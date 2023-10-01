@@ -5,7 +5,6 @@ const ArtistDetail = ({ artistDetail }) => {
 
   return (
     <>
-
       <div className="card border rounded-4 mx-5 text-center h-75 p-3 m-3 bg bg-info" >
         <div className="card-header d-flex justify-content-center">
           <h5 className="text-primary">{name}</h5>
@@ -15,14 +14,12 @@ const ArtistDetail = ({ artistDetail }) => {
           <p className="card-text">{bio}</p>
           <div>
             {genres && genres.map(genre => <span className="badge bg-danger rounded-pill px-4 py-1 small" key={genre.id}>{genre.name} </span>)}
-
           </div>
         </div>
       </div>
       <div>
         <EditArtistModal artistDetail={artistDetail} ></EditArtistModal>
       </div>
-
     </>
 
   )

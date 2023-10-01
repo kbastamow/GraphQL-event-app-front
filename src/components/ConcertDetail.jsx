@@ -16,9 +16,7 @@ const ConcertDetail = ({ eventDetail }) => {
 
   return (
     <>
-      {/* <div className="h-100"> */}
-        {/* <div className="px-5"> */}
-        <div className="card border rounded-4 mx-5 text-center h-75 p-3 m-3 bg bg-info" >
+            <div className="card border rounded-4 mx-5 text-center h-75 p-3 m-3 bg bg-info" >
           <div className="d-flex justify-content-center">
             <img className="card-img-top w-50" src={image ? image : placeholderImage} alt="Card image cap" />
           </div>
@@ -48,8 +46,6 @@ const ConcertDetail = ({ eventDetail }) => {
         <div className="">
             <EditConcertModal eventDetail={eventDetail}></EditConcertModal>
           </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
 
   )

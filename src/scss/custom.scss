@@ -6,8 +6,8 @@ $secondary:  #0582ca;
 $success: #6610f2;
 $warning:#6978DB;
 $danger: #051923ff;
-$light: #A9BCD0;
 $info: #273469;
+$light: #A9BCD0;
 
 
 // $theme-colors: (
@@ -60,7 +60,7 @@ $info: #273469;
 // @import "bootstrap/scss/tooltip";
 @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 @import "bootstrap/scss/utilities";

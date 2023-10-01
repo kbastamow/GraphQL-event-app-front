@@ -28,7 +28,6 @@ const Concert = ({event}) => {
 })
 
    const showDetails = () => {
-    console.log("Details btn")
     navigate('/'+ id)
     }
 

@@ -36,7 +36,7 @@ const EditConcertModal = ({ eventDetail }) => {
      <div className="d-flex justify-content-end">
       <button
         type='button'
-        className='btn btn-secondary btn-sm'
+        className='btn btn-danger btn-sm'
         data-bs-toggle='modal'
         data-bs-target='#addEventModal'
       >
@@ -126,7 +126,7 @@ const EditConcertModal = ({ eventDetail }) => {
                           data-bs-dismiss='modal'
                           className='btn btn-danger mt-2'
                         >
-                          Submit
+                          Save
                         </button>
                       </div>
                     </form>

@@ -7,7 +7,7 @@ const DeleteConcertModal = ({ handleDelete }) => {
     <>
       <button
         type="button"
-        className="btn btn-secondary btn-small"
+        className="btn btn-danger btn-small"
         data-bs-toggle="modal"
         data-bs-target="#deleteEventModal"
       >
