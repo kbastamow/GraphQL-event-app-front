@@ -7,12 +7,12 @@ const DeleteConcertModal = ({ handleDelete }) => {
     <>
       <button
         type="button"
-        className="btn btn-secondary"
+        className="btn btn-secondary btn-small"
         data-bs-toggle="modal"
         data-bs-target="#deleteEventModal"
       >
         <div className="d-flex align-items-center">
-          <BsFillTrash3Fill></BsFillTrash3Fill>
+          <BsFillTrash3Fill className="small"></BsFillTrash3Fill>
         </div>
       </button>
 

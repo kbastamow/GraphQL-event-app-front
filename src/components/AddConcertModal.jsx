@@ -72,7 +72,7 @@ const AddConcertModal = () => {
 
             <div className='modal-content '>
               <div className='modal-header'>
-                <div className='modal-title' id='addEventModalLabel'>
+                <div className='modal-title text-danger' id='addEventModalLabel'>
                   Add Event
                 </div>
                 <button
@@ -82,8 +82,8 @@ const AddConcertModal = () => {
                   aria-label='Close'
                 ></button>
               </div>
-              <div className="d-flex flex-row">
-                <div className="bg bg-light">
+              <div className="d-flex flex-wrap bg bg-light justify-content-around" >
+               
                   <div className='modal-body px-5'>
                     <form onSubmit={onSubmit}>
                       <div className='mb-1'>
@@ -145,13 +145,12 @@ const AddConcertModal = () => {
                       </div>
                     </form>
                   </div>
-                </div>
+               
               
-                <div className="flex flex-column bg bg-light px-4 pt-2">
-                  <div className="bg bg-light text-start small  px-4 mh-5 h-75 overflow-auto">
+                  <div className="d-flex flex-column justify-content-around px-4 pt-2" style={{ maxHeight: '500px' }}>
+                  <div className="text-start small px-2 h-50 overflow-auto">
                     <div>Select Artists:</div>
-                    <div className="ps-3">
-                      <ul className="list-unstyled">
+                      <ul className="list-unstyled ps-3">
                         {data?.artists?.map((artist) =>
                         (
                           <li key={artist.id} className="artistList text-danger link" onClick={() => setArtists([...artists, { id: artist.id, name: artist.name }])}>
@@ -159,7 +158,6 @@ const AddConcertModal = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
                   </div>
                   <AddArtist></AddArtist>
                 </div>

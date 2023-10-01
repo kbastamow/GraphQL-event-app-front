@@ -46,7 +46,6 @@ const Concert = ({event}) => {
     <div className="d-flex justify-content-end gap-5">
     <div onClick={showDetails} className="link text-primary"><FaPaperPlane className="text-danger me-2"></FaPaperPlane> Details </div>
     <DeleteConcertModal handleDelete={deleteEvent}></DeleteConcertModal>
-    {/* <button className='btn btn-danger btn-sm' onClick={deleteEvent}> <BsFillTrash3Fill></BsFillTrash3Fill> </button> */}
     </div>
   </div>
 </div>

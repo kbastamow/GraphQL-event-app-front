@@ -41,13 +41,12 @@ const AddArtist = () => {
   return (
     <>
     <div className="d-flex flex-column align-items-center">
-    <hr className="hr"/>
       <form onSubmit={onSubmit} className="d-flex flex-column align-items-center">
         <div className='mb-1 px-2'>
           <div className="small text-center">Add artist</div>
           <input
             type='text'
-            className='form-control input-sm'
+            className='form-control input input-sm small p-1 ps-2'
             id='name'
             placeholder= "name"
             value={name}

@@ -65,7 +65,7 @@ console.log(artistDetail)
 
                     <div className='modal-content'>
                         <div className='modal-header'>
-                            <div className='modal-title' id='editArtistModalLabel'>
+                            <div className='modal-title text-danger' id='editArtistModalLabel'>
                                 Edit Artist
                             </div>
                             <button
@@ -75,8 +75,8 @@ console.log(artistDetail)
                                 aria-label='Close'
                             ></button>
                         </div>
-                        <div className="d-flex flex-row">
-                            <div className="bg bg-light flex-grow-1">
+                        <div className="d-flex flex-wrap bg bg-light justify-content-around" >
+                            <div className="flex-grow-1">
                                 <div className='modal-body px-5'>
                                     <form onSubmit={onSubmit}>
                                         <div className='mb-1'>
@@ -157,8 +157,8 @@ console.log(artistDetail)
                                 </div>
                             </div>
 
-                            <div className="flex flex-column bg bg-light px-4 pt-2">
-                                <div className="bg bg-light text-start small px-2 overflow-auto">
+                            <div className="d-flex flex-column justify-content-around px-4 pt-2" style={{ maxHeight: '500px' }}>
+                                <div className="bg bg-light text-start small px-2 h-50 overflow-auto">
                                     <div>Select Genres:</div>
                                     <div className="ps-3">
                                         <ul className="list-unstyled">
