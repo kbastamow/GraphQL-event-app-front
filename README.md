@@ -12,7 +12,7 @@ The administrator can add, edit and delete concerts, and add and edit artists, t
 
 The backend for the app can be found here:  
 
-🔗[Graphql-event-app-backend](https://github.com/kbastamow/GraphQL-event-app-back)
+🔗[Graphql Event App Backend](https://github.com/kbastamow/GraphQL-event-app-back)
 
 ## ⚒️ Tech
 
