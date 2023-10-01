@@ -8,7 +8,6 @@ const DELETE_EVENT = gql`
     }
   }
 `
-
 const ADD_EVENT = gql`
   mutation addEvent($name: String!, $description: String!, $price: Int!, $date: String!, $artistIds: [String] ) {
     addEvent(name: $name, description: $description, price: $price, date: $date, artistIds: $artistIds) {
@@ -32,6 +31,5 @@ const UPDATE_EVENT = gql`
     }
   }
 `
-
 
 export { DELETE_EVENT, ADD_EVENT, UPDATE_EVENT }

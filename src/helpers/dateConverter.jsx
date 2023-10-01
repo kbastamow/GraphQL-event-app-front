@@ -1,7 +1,7 @@
-import moment from 'moment';
+import moment from "moment";
 
- const dateConverter = (date) => {
-    return moment(date).format('MMMM Do YYYY, hh:mm')
-}
+const dateConverter = (date) => {
+    return moment(date).format("MMMM Do YYYY, hh:mm");
+};
 
-export default dateConverter
+export default dateConverter;

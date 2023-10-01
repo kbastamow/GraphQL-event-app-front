@@ -11,7 +11,6 @@ const ADD_ARTIST = gql`
     }
   }
 `
-
 const UPDATE_ARTIST = gql`
   mutation updateArtist($id: ID!, $name: String!, $bio: String!, $type: UpdateArtistType! ) {
    updateArtist(id: $id, name: $name, bio: $bio,  type: $type) {
@@ -25,5 +24,4 @@ const UPDATE_ARTIST = gql`
 }
   }
 `
-
 export { ADD_ARTIST, UPDATE_ARTIST }

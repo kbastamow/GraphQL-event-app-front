@@ -18,31 +18,31 @@ const cache = new InMemoryCache({
         //   merge(existing, incoming) {
         //     return incoming;
         //   },
-        },
       },
     },
-  });
+  },
+});
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
   cache: cache
-  });
-  
+});
+
 function App() {
 
   return (
     <>
-     <div className="container-fluid bg bg-warning display">
-     <div className= "row w-75 mx-auto">
-      <ApolloProvider client={client}> 
-        <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home></Home>}></Route>
-          <Route path="/:eventId" element={<Event />} />
-          <Route path="/artist/:id" element={<Artist />} />
-        </Routes>
-        </BrowserRouter>
-        </ApolloProvider>
+      <div className="container-fluid bg bg-warning display">
+        <div className="row w-75 mx-auto">
+          <ApolloProvider client={client}>
+            <BrowserRouter>
+              <Routes>
+                <Route path='/' element={<Home></Home>}></Route>
+                <Route path="/:eventId" element={<Event />} />
+                <Route path="/artist/:id" element={<Artist />} />
+              </Routes>
+            </BrowserRouter>
+          </ApolloProvider>
         </div>
       </div>
     </>

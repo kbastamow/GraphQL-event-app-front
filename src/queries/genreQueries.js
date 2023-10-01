@@ -1,11 +1,11 @@
-import  { gql } from '@apollo/client'
+import { gql } from "@apollo/client";
 
 const GET_GENRES = gql`
-query getGenres {
+  query getGenres {
     genres {
-        id,
-        name,
+      id
+      name
     }
-}
-`
-export { GET_GENRES }
+  }
+`;
+export { GET_GENRES };

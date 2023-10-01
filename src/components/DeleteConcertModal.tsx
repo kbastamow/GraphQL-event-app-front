@@ -2,7 +2,6 @@ import { BsFillTrash3Fill } from "react-icons/bs";
 import React from "react";
 
 const DeleteConcertModal = ({ handleDelete }) => {
-
   return (
     <>
       <button
@@ -15,7 +14,6 @@ const DeleteConcertModal = ({ handleDelete }) => {
           <BsFillTrash3Fill className="small"></BsFillTrash3Fill>
         </div>
       </button>
-
       <div
         className="modal fade"
         id="deleteEventModal"
